@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="Y6W-OH-hqX" customClass="DetailViewController" customModule="FM_Task2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wm-ho-9fp">
+                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <items>
+                                    <navigationItem title="Title" id="jRo-5G-zPC">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="wCP-WI-OU9">
+                                            <connections>
+                                                <action selector="dismissDetailView:" destination="Y6W-OH-hqX" id="Xg6-CY-Jaa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Enz-0n-vih">
+                                <rect key="frame" x="0.0" y="91" width="390" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <barButtonItem title="Item" image="photo.artframe" catalog="system" id="5CW-Vc-3GD">
+                                        <connections>
+                                            <action selector="selectPictureButton:" destination="Y6W-OH-hqX" id="oSz-Ki-Qzb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zcI-HP-0vZ"/>
+                                    <barButtonItem title="Item" image="tray.and.arrow.down.fill" catalog="system" id="ZH6-Bg-qZm">
+                                        <connections>
+                                            <action selector="saveButton:" destination="Y6W-OH-hqX" id="qhs-nK-IQr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="DUg-Iz-xtO"/>
+                                    <barButtonItem title="Item" image="trash.fill" catalog="system" id="wiI-4Q-LFB">
+                                        <connections>
+                                            <action selector="deletePictureButton:" destination="Y6W-OH-hqX" id="mP2-NJ-Aza"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" systemColor="labelColor"/>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fNT-jg-8aa">
+                                <rect key="frame" x="29" y="135" width="333" height="616"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Enz-0n-vih" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Nfn-Sk-MRI"/>
+                            <constraint firstItem="0Wm-ho-9fp" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Onm-5c-GtV"/>
+                            <constraint firstItem="Enz-0n-vih" firstAttribute="top" secondItem="0Wm-ho-9fp" secondAttribute="bottom" id="SVS-yG-6qf"/>
+                            <constraint firstItem="0Wm-ho-9fp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="i0R-po-Fm6"/>
+                            <constraint firstItem="Enz-0n-vih" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jU4-QR-y58"/>
+                            <constraint firstItem="0Wm-ho-9fp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rev-0T-DZ7"/>
+                        </constraints>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="fNT-jg-8aa" id="Hvj-o8-ntm"/>
+                        <outlet property="navigationBar" destination="0Wm-ho-9fp" id="Par-rR-j2k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036.9230769230769" y="-34.123222748815166"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <image name="trash.fill" catalog="system" width="119" height="128"/>
+        <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
