@@ -15,10 +15,12 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var commentField: UITextField!
     
-    var cellList = [CellModel]()
+//    var cellList = [CellModel]()
     var mytimer:Timer!
     var count = 0
 
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,19 +46,28 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func addStockList(_ sender: Any) {
-        let cellModel = CellModel(time: date.text!, stockCount: countLabel.text!, comment: commentField.text!, check: false)
-        cellList.append(cellModel)
+        let cellModel = CellModel()
+        cellModel.time = date.text!
+        cellModel.stockCount = countLabel.text!
+        cellModel.comment = commentField.text!
+        cellModel.check = false
+        try! realm.write{
+            realm.add(cellModel)
+        }
+//        cellList.append(cellModel)
         commentField.text = ""
         tableView.reloadData()
     }
     
     @IBAction func clearButton(_ sender: Any) {
-        cellList.removeAll()
+        try!realm.write{
+            realm.deleteAll()
+        }
         tableView.reloadData()
     }
     
     @IBAction func calcButton(_ sender: Any) {
-        let calcList = cellList.filter({ $0.check})
+        let calcList = realm.objects(CellModel.self).filter({ $0.check})
         var sumValue = 0
 
         for i in calcList {
@@ -98,7 +109,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
 
 extension ViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellList.count
+        return realm.objects(CellModel.self).count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -107,7 +118,8 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! TableViewCell
-
+        let cellList = realm.objects(CellModel.self)
+        
         cell.indexPathRow = indexPath.row
         cell.delegate = self
 
@@ -133,11 +145,16 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
 
 extension ViewController: TableViewCellDelegate {
     func customCellDelegateDidTapButton(indexPathRow: Int) {
-        cellList.remove(at: indexPathRow)
+        let cellList = realm.objects(CellModel.self)
+        let targetCell = cellList[indexPathRow]
+        try!realm.write{
+            realm.delete(targetCell)
+        }
         tableView.reloadData()
     }
 
     func customCellDelegateDidTapCheckBox(indexPathRow: Int) {
+        let cellList = realm.objects(CellModel.self)
         cellList[indexPathRow].check = !cellList[indexPathRow].check
         tableView.reloadData()
     }
@@ -148,6 +165,7 @@ extension ViewController: TableViewCellDelegate {
         
         detailView.delegate = self
         
+        let cellList = realm.objects(CellModel.self)
         let cell = cellList[indexPathRow]
         
         let navigationTitleLabel = cell.time + "　" + cell.stockCount + "　" + cell.comment
@@ -163,6 +181,9 @@ extension ViewController: TableViewCellDelegate {
 
 extension ViewController: PictureDelegate {
     func pictureDelegate(image: UIImage, indexPathRow: Int) {
-        cellList[indexPathRow].image = image
+        let cellList = realm.objects(CellModel.self)
+        try!realm.write{
+            cellList[indexPathRow].image = image
+        }
     }
 }

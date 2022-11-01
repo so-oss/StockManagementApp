@@ -8,10 +8,10 @@
 import UIKit
 import RealmSwift
 
-struct CellModel {
-    var time:String
-    var stockCount:String
-    var comment:String
-    var check:Bool
-    var image = UIImage(named: "no_image")
+class CellModel:Object {
+    @objc dynamic var time:String = "00:00:00"
+    @objc dynamic var stockCount:String = "0"
+    @objc dynamic var comment:String = ""
+    @objc dynamic var check:Bool = false
+    @objc dynamic var image = UIImage(named: "no_image")
 }
