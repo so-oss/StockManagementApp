@@ -18,11 +18,12 @@
 		1183349628DEA35F009295D3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183349528DEA35F009295D3 /* DetailViewController.swift */; };
 		1183C81C2893E4C3007FA54F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183C81A2893E4C3007FA54F /* TableViewCell.swift */; };
 		1183C81D2893E4C3007FA54F /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1183C81B2893E4C3007FA54F /* TableViewCell.xib */; };
+		E87F5499FDE1C1A79613AA15 /* Pods_StockManagementApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D0ECFF2109805B0DFBF3DB /* Pods_StockManagementApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1137293628CCCEC00000CE09 /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
-		114847C72865C5390064779C /* FM-Task2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FM-Task2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		114847C72865C5390064779C /* StockManagementApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockManagementApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		114847CA2865C5390064779C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		114847CC2865C5390064779C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		114847CE2865C5390064779C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,9 +32,12 @@
 		114847D62865C53C0064779C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		114847D82865C53C0064779C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1183349328DEA2BA009295D3 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
-		1183349528DEA35F009295D3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = "FM-Task2/Controller/DetailViewController.swift"; sourceTree = SOURCE_ROOT; };
+		1183349528DEA35F009295D3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = StockManagementApp/Controller/DetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		1183C81A2893E4C3007FA54F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		1183C81B2893E4C3007FA54F /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		8A63CE645AB5CC73F1157998 /* Pods-StockManagementApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockManagementApp.debug.xcconfig"; path = "Target Support Files/Pods-StockManagementApp/Pods-StockManagementApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B430B9DB08B1B9E4AA7A11A9 /* Pods-StockManagementApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockManagementApp.release.xcconfig"; path = "Target Support Files/Pods-StockManagementApp/Pods-StockManagementApp.release.xcconfig"; sourceTree = "<group>"; };
+		F4D0ECFF2109805B0DFBF3DB /* Pods_StockManagementApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockManagementApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E87F5499FDE1C1A79613AA15 /* Pods_StockManagementApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,20 +85,22 @@
 		114847BE2865C5390064779C = {
 			isa = PBXGroup;
 			children = (
-				114847C92865C5390064779C /* FM-Task2 */,
+				114847C92865C5390064779C /* StockManagementApp */,
 				114847C82865C5390064779C /* Products */,
+				882026FA9129B6492BBCA91C /* Pods */,
+				AE83FDB4641D427CD577406A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		114847C82865C5390064779C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				114847C72865C5390064779C /* FM-Task2.app */,
+				114847C72865C5390064779C /* StockManagementApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		114847C92865C5390064779C /* FM-Task2 */ = {
+		114847C92865C5390064779C /* StockManagementApp */ = {
 			isa = PBXGroup;
 			children = (
 				1137293828CCCFBE0000CE09 /* Model */,
@@ -103,27 +110,47 @@
 				114847D52865C53C0064779C /* LaunchScreen.storyboard */,
 				114847D82865C53C0064779C /* Info.plist */,
 			);
-			path = "FM-Task2";
+			path = StockManagementApp;
+			sourceTree = "<group>";
+		};
+		882026FA9129B6492BBCA91C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A63CE645AB5CC73F1157998 /* Pods-StockManagementApp.debug.xcconfig */,
+				B430B9DB08B1B9E4AA7A11A9 /* Pods-StockManagementApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AE83FDB4641D427CD577406A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4D0ECFF2109805B0DFBF3DB /* Pods_StockManagementApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		114847C62865C5390064779C /* FM-Task2 */ = {
+		114847C62865C5390064779C /* StockManagementApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 114847DB2865C53C0064779C /* Build configuration list for PBXNativeTarget "FM-Task2" */;
+			buildConfigurationList = 114847DB2865C53C0064779C /* Build configuration list for PBXNativeTarget "StockManagementApp" */;
 			buildPhases = (
+				55CBD0A0893DC703A1308074 /* [CP] Check Pods Manifest.lock */,
 				114847C32865C5390064779C /* Sources */,
 				114847C42865C5390064779C /* Frameworks */,
 				114847C52865C5390064779C /* Resources */,
+				ACE1EAAD72CB105DB3D67C54 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "FM-Task2";
+			name = StockManagementApp;
 			productName = "FM-Task1";
-			productReference = 114847C72865C5390064779C /* FM-Task2.app */;
+			productReference = 114847C72865C5390064779C /* StockManagementApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -144,7 +171,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 114847C22865C5390064779C /* Build configuration list for PBXProject "FM-Task2" */;
+			buildConfigurationList = 114847C22865C5390064779C /* Build configuration list for PBXProject "StockManagementApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -157,7 +184,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				114847C62865C5390064779C /* FM-Task2 */,
+				114847C62865C5390064779C /* StockManagementApp */,
 			);
 		};
 /* End PBXProject section */
@@ -176,6 +203,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55CBD0A0893DC703A1308074 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StockManagementApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACE1EAAD72CB105DB3D67C54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockManagementApp/Pods-StockManagementApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockManagementApp/Pods-StockManagementApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockManagementApp/Pods-StockManagementApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		114847C32865C5390064779C /* Sources */ = {
@@ -329,6 +398,7 @@
 		};
 		114847DC2865C53C0064779C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A63CE645AB5CC73F1157998 /* Pods-StockManagementApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -336,7 +406,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L9S2LTSDGK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "FM-Task2/Info.plist";
+				INFOPLIST_FILE = StockManagementApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -358,6 +428,7 @@
 		};
 		114847DD2865C53C0064779C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B430B9DB08B1B9E4AA7A11A9 /* Pods-StockManagementApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -365,7 +436,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L9S2LTSDGK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "FM-Task2/Info.plist";
+				INFOPLIST_FILE = StockManagementApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -388,7 +459,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		114847C22865C5390064779C /* Build configuration list for PBXProject "FM-Task2" */ = {
+		114847C22865C5390064779C /* Build configuration list for PBXProject "StockManagementApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				114847D92865C53C0064779C /* Debug */,
@@ -397,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		114847DB2865C53C0064779C /* Build configuration list for PBXNativeTarget "FM-Task2" */ = {
+		114847DB2865C53C0064779C /* Build configuration list for PBXNativeTarget "StockManagementApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				114847DC2865C53C0064779C /* Debug */,

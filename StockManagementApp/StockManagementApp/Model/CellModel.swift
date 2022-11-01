@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 struct CellModel {
     var time:String
